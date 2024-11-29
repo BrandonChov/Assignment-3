@@ -1,0 +1,23 @@
+I want to code a spc (statiscal process control) webpage. Here is the description. 
+We have some colorful bars stacked on top of each other.
+
+.8
+    Redbar
+.7
+    Yellowbar
+.6
+    Greenbar
+.5
+    Greenbar
+.4
+    Yellowbar
+.3
+    Redbar
+.2
+
+The user works in a factory and is allowed to input measurement values
+The user is proded via a lightbulb to make a measurement every 1 minute
+
+The last 5 measurements are ploted on the bars.
+Use SVG to connect the points with a line
+q

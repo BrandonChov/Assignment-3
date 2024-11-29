@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPC Webpage</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script src="./scripts/script.js" defer></script>
+</head>
+<body>
+    <!-- style="display: flex;" -->
+<div class="bar-container">
+    <div>
+    <div id="points-div">
+        <!-- <div class="point" style="margin-left: 125px; top: 290px;"></div> 
+        <div class="point" style="margin-left: 250px; top: 200px;"></div>
+        <div class="point" style="margin-left: 375px; top: 150px;"></div>
+        <div class="point" style="margin-left: 500px; top: 100px;"></div>
+        <div class="point" style="margin-left: 650px; top: 0px;"></div> -->
+        <!-- <div class="point"></div> -->
+    </div>
+    <div class="bar red">.60</div>
+    <div class="bar yellow">.50</div>
+    <div class="bar green">.40</div>
+    <div class="bar green">.30</div>
+    <div class="bar yellow">.20</div>
+    <div class="bar red">.10</div>
+
+    <!-- SVG to plot measurements -->
+    <!-- <svg width="100" height="300" id="plot-area"></svg> -->
+    
+    <div class="lightbulb" id="lightbulb">💡</div>
+    <div style="border-bottom: 0px;">
+    <label for="code">Enter Measurement</label>
+    <input type='text' id="code" name="code">
+    <button type="button" onclick="addPoint()">Submit</button>
+    
+</div>
+</div>
+<!-- <img src='./images/red bulb crop.png'></img> -->
+
+
+
+<!-- <script>
+    const measurements = [];
+    const maxMeasurements = 5;
+    const barHeight = 300; // total height of all bars
+    const promptInterval = 60000; // 1 minute
+    let lightbulb = document.getElementById('lightbulb');
+    let plotArea = document.getElementById('plot-area');
+
+    // Function to prompt the user for a measurement
+    function promptMeasurement() {
+        lightbulb.style.color = 'yellow'; // Lightbulb on
+        const value = parseFloat(prompt("Enter a measurement between 0 and 1:"));
+        
+        if (value >= 0 && value <= 1) {
+            measurements.push(value);
+            if (measurements.length > maxMeasurements) {
+                measurements.shift(); // Keep only the last 5 measurements
+            }
+            updatePlot();
+        }
+
+        lightbulb.style.color = ''; // Lightbulb off
+    }
+
+    // Function to update the SVG plot
+    function updatePlot() {
+        plotArea.innerHTML = ''; // Clear the existing plot
+        
+        if (measurements.length < 2) return; // Need at least 2 points to draw a line
+
+        const points = measurements.map((value, index) => {
+            const x = (index / (maxMeasurements - 1)) * 100; // Spread points horizontally
+            const y = barHeight - (value * barHeight); // Scale value to bar height
+            return `${x},${y}`;
+        }).join(' ');
+
+        const polyline = document.createElementNS('http://www.w3.org/2000/svg', 'polyline');
+        polyline.setAttribute('points', points);
+        polyline.setAttribute('stroke', 'black');
+        polyline.setAttribute('stroke-width', '2');
+        polyline.setAttribute('fill', 'none');
+        plotArea.appendChild(polyline);
+    }
+
+    // Prompt the user every 1 minute
+    setInterval(promptMeasurement, promptInterval);
+
+</script> -->
+
+</body>
+</html>

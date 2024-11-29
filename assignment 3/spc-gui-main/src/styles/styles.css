@@ -1,0 +1,50 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+    /* border: 1px solid black; */
+}
+
+.bar-container {
+    /* border: 1px solid black; */
+    /* border-bottom: 0px; */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    max-width: 800px;
+    height: 300px;
+    margin: 20px auto;
+}
+.point{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: black;
+    z-index: 22;
+}
+.bar {
+    height: 50px;
+    width: 100%;
+    /* border: .5px solid black; */
+}
+.red {
+    background-color: red;
+}
+.yellow {
+    background-color: yellow;
+}
+.green {
+    background-color: green;
+}
+svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.lightbulb {
+    position: absolute;
+    right: 0px;
+    /* margin-right: auto; */
+    font-size: 30px;;
+    background-color: red;
+}
